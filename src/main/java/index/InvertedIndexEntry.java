@@ -1,4 +1,4 @@
-package InvertedIndex;
+package index;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -8,12 +8,11 @@ import java.util.Map;
 
 public class InvertedIndexEntry {
     private final Map<Path, List<Integer>> locations;
-
     public InvertedIndexEntry() {
         this.locations = new HashMap<>();
     }
 
-    public void addLocation(Path path, int wordNumber) {
+    synchronized public void addLocation(Path path, int wordNumber) {
         var locationsList = locations.get(path);
 
         if (locationsList == null) {
@@ -25,14 +24,14 @@ public class InvertedIndexEntry {
         }
     }
 
-    public void printState() {
+    synchronized public void printState() {
         for (var path : locations.entrySet()) {
             System.out.println(path.getKey());
             System.out.println(path.getValue());
         }
     }
 
-    public Map<Path, List<Integer>> getLocations() {
+    synchronized public Map<Path, List<Integer>> getLocations() {
         return locationsDeepCopy();
     }
 

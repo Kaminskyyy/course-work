@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7363d-1c2d-482d-91fe-17d819e47651" name="Changes" comment="Add FileScanner">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InvertedIndex/InvertedIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InvertedIndex/InvertedIndexEntry.java" afterDir="false" />
+    <list default="true" id="6cb7363d-1c2d-482d-91fe-17d819e47651" name="Changes" comment="Add InvertedIndex v1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/index/INCreatorWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndexCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndexSelfImplemented.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndexUsingCHM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InvertedIndex/InvertedIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InvertedIndex/InvertedIndexEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndexEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,18 +75,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/KPI/4_curs/cursach/course-work",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/KPI/4_curs/cursach/course-work&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17 (2)" />
@@ -118,12 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1703259593836</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add InvertedIndex v1">
+      <option name="closed" value="true" />
+      <created>1703274835711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703274835711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Add FileScanner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add FileScanner" />
+    <MESSAGE value="Add InvertedIndex v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add InvertedIndex v1" />
   </component>
 </project>
