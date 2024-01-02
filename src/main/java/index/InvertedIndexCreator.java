@@ -15,12 +15,6 @@ public class InvertedIndexCreator {
         this.threadsNum = threadsNum;
     }
 
-//    public InvertedIndexCreator(List<Path> files, int threadsNum) {
-//        this.files = files;
-//        this.threadsNum = threadsNum;
-//        this.index = new InvertedIndexSelfImplemented();
-//    }
-
     public void create() throws InterruptedException {
         var chunkSize = files.size() / threadsNum;
         var threads = new ArrayList<Thread>();
