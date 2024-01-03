@@ -4,6 +4,7 @@ import index.InvertedIndex;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.file.Path;
 import java.util.HashSet;
 
 public class ConnectionProcessor {
@@ -25,6 +26,8 @@ public class ConnectionProcessor {
     }
 
     public void process() {
+        System.out.println(Thread.currentThread().getName() + "\tConnection accepted: " + connection.getRemoteSocketAddress());
+
         try {
             sendMessage("CONN-ACPT");
 
@@ -32,6 +35,7 @@ public class ConnectionProcessor {
             while (true) {
                 incomingMessage = acceptMessage();
 
+                if (incomingMessage.isEmpty()) sendMessage("EMPTY-REQUEST");
                 if (incomingMessage.equals("/quit")) break;
 
                 var searchRequest = incomingMessage.toLowerCase().split(" ");
@@ -45,6 +49,7 @@ public class ConnectionProcessor {
             System.out.println("PORT: " + connection.getPort() + "\nERROR: " + e.getMessage());
         } finally {
             closeConnection();
+            System.out.println(Thread.currentThread().getName() + "\tConnection closed: " + connection.getRemoteSocketAddress());
         }
     }
 
@@ -74,10 +79,21 @@ public class ConnectionProcessor {
     }
 
     private String processRequest(String[] words) {
-        var files = new HashSet<>(index.get(words[0]).keySet());
+        if (words.length < 1) return "EMPTY-REQUEST";
+        HashSet<Path> files = null;
 
-        for (var i = 1; i < words.length; i++) {
-            files.retainAll(index.get(words[i]).keySet());
+        var isFirst = true;
+        for (String word : words) {
+            var indexEntry = index.get(word);
+            if (indexEntry == null) return "NOT-FOUND";
+
+            if (isFirst) {
+                files = new HashSet<>(indexEntry.keySet());
+                isFirst = false;
+                continue;
+            }
+
+            files.retainAll(indexEntry.keySet());
         }
 
         var result = "";
