@@ -63,8 +63,7 @@ public class InvertedIndexCustom implements InvertedIndex {
         lock.readLock().lock();
         try {
             var entry = index.get(word);
-            if (entry != null) return entry.getLocations();
-            return null;
+            return entry.getLocations();
         } finally {
             lock.readLock().unlock();
         }

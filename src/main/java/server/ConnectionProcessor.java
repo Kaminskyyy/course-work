@@ -4,6 +4,7 @@ import index.InvertedIndex;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.HashSet;
 
 public class ConnectionProcessor {
     private final Socket connection;
@@ -25,7 +26,7 @@ public class ConnectionProcessor {
 
     public void process() {
         try {
-            sendMessage("CONN-ACPT  processed by" + Thread.currentThread().getName());
+            sendMessage("CONN-ACPT");
 
             var incomingMessage = "";
             while (true) {
@@ -33,8 +34,10 @@ public class ConnectionProcessor {
 
                 if (incomingMessage.equals("/quit")) break;
 
-                System.out.println(incomingMessage);
-                sendMessage(incomingMessage);
+                var searchRequest = incomingMessage.toLowerCase().split(" ");
+                var result = processRequest(searchRequest);
+
+                sendMessage(result);
             }
 
             sendMessage("CONN-CLOSED");
@@ -47,12 +50,13 @@ public class ConnectionProcessor {
 
     private void sendMessage(String message) {
         try {
-            out.write(message + "\n");
+            out.write(message + "/end");
             out.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
     private String acceptMessage() {
         try {
             return in.readLine();
@@ -67,5 +71,20 @@ public class ConnectionProcessor {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private String processRequest(String[] words) {
+        var files = new HashSet<>(index.get(words[0]).keySet());
+
+        for (var i = 1; i < words.length; i++) {
+            files.retainAll(index.get(words[i]).keySet());
+        }
+
+        var result = "";
+        for (var file: files) {
+            result += (file + " ");
+        }
+
+        return result.stripIndent();
     }
 }
