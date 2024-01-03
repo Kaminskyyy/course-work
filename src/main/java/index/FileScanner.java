@@ -1,3 +1,5 @@
+package index;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,10 +9,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class FileScanner {
-    private final static Queue<Path> directoriesToScan = new LinkedList<>();
-    private final static List<Path> files = new ArrayList<>();
+    private final Queue<Path> directoriesToScan = new LinkedList<>();
+    private final List<Path> files = new ArrayList<>();
 
-    public static List<Path> scan(String rootDirectory) throws IOException {
+    public List<Path> scan(String rootDirectory) throws IOException {
         var rootDirectoryPath = Path.of(rootDirectory);
         directoriesToScan.add(rootDirectoryPath);
 
@@ -21,7 +23,7 @@ public class FileScanner {
         return files;
     }
 
-    private static void scan0(Path path) throws IOException {
+    private void scan0(Path path) throws IOException {
         try(var entry = Files.list(path)) {
             entry.forEach((item) -> {
                 if (Files.isDirectory(item)) {

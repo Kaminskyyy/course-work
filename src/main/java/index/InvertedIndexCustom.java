@@ -38,17 +38,6 @@ public class InvertedIndexCustom implements InvertedIndex {
         }
     }
 
-    @Override
-    public void addBulk(HashMap<Path, List<String>> files) {
-        for (var file: files.entrySet()) {
-            var path = file.getKey();
-            var words = file.getValue();
-            for (int i = 0; i < words.size(); i++) {
-                add(words.get(i), path, i);
-            }
-        }
-    }
-
     public void remove(String word) {
         lock.writeLock().lock();
         try {

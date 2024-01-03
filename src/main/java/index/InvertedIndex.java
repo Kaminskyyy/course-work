@@ -8,8 +8,6 @@ import java.util.Map;
 public interface InvertedIndex {
     void add(String word, Path path, int wordNumber);
 
-    void addBulk(HashMap<Path, List<String>> files);
-
     Map<Path, List<Integer>> get(String word);
 
     int size();

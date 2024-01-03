@@ -1,7 +1,6 @@
 package server.threadpool;
 
 import index.InvertedIndex;
-import server.ConnectionProcessor;
 
 import java.net.Socket;
 import java.util.concurrent.atomic.AtomicBoolean;

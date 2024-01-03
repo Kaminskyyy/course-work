@@ -1,4 +1,4 @@
-package server;
+package server.threadpool;
 
 import index.InvertedIndex;
 
