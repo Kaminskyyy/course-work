@@ -14,7 +14,11 @@ public class Main {
         );
         var index = invertedIndexCreator.create();
 
-        var server = new Server(index, 2, 2);
+        var server = new Server(
+                index,
+                commandLineArguments.getThreadPoolSize(),
+                commandLineArguments.getQueueSize()
+        );
         server.start();
     }
 }
