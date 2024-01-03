@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7363d-1c2d-482d-91fe-17d819e47651" name="Changes" comment="Add ConnectionProcessor v1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
+    <list default="true" id="6cb7363d-1c2d-482d-91fe-17d819e47651" name="Changes" comment="ConnectionProcessor fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommandLineArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommandLineArguments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/index/InvertedIndexCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/index/InvertedIndexCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/ConnectionProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ConnectionProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/threadpool/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/threadpool/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +157,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704212061681</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Server and ConnectionProcessor v2">
+      <option name="closed" value="true" />
+      <created>1704296566580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704296566580</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add CommandLineArguments v1">
+      <option name="closed" value="true" />
+      <created>1704301585998</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704301585998</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1704301611365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704301611365</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ConnectionProcessor fix">
+      <option name="closed" value="true" />
+      <created>1704309846084</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704309846084</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -166,6 +199,10 @@
     <MESSAGE value="InvertedIndex v2" />
     <MESSAGE value="Add ThreadPool" />
     <MESSAGE value="Add ConnectionProcessor v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ConnectionProcessor v1" />
+    <MESSAGE value="Add Server and ConnectionProcessor v2" />
+    <MESSAGE value="Add CommandLineArguments v1" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="ConnectionProcessor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ConnectionProcessor fix" />
   </component>
 </project>
